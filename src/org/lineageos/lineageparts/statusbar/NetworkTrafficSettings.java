@@ -34,8 +34,8 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
 
     private DropDownPreference mNetTrafficMode;
     private LineageSecureSettingSwitchPreference mNetTrafficAutohide;
+    private DropDownPreference mNetTrafficUnits;
     private LineageSecureSettingSwitchPreference mNetTrafficShowUnits;
-    private LineageSecureSettingSwitchPreference mNetTrafficUseKbps;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -54,13 +54,16 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
                 findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_AUTOHIDE);
         mNetTrafficAutohide.setOnPreferenceChangeListener(this);
 
+        mNetTrafficUnits = (DropDownPreference)
+                findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_UNITS);
+        mNetTrafficUnits.setOnPreferenceChangeListener(this);
+        int units = LineageSettings.Secure.getInt(resolver,
+                LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, /* Mbps */ 1);
+        mNetTrafficUnits.setValue(String.valueOf(units));
+
         mNetTrafficShowUnits = (LineageSecureSettingSwitchPreference)
                 findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_SHOW_UNITS);
         mNetTrafficShowUnits.setOnPreferenceChangeListener(this);
-
-        mNetTrafficUseKbps = (LineageSecureSettingSwitchPreference)
-                findPreference(LineageSettings.Secure.NETWORK_TRAFFIC_USE_KBPS);
-        mNetTrafficUseKbps.setOnPreferenceChangeListener(this);
 
         updateEnabledStates(mode);
     }
@@ -72,6 +75,10 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
             LineageSettings.Secure.putInt(getActivity().getContentResolver(),
                     LineageSettings.Secure.NETWORK_TRAFFIC_MODE, mode);
             updateEnabledStates(mode);
+        } else if (preference == mNetTrafficUnits) {
+            int units = Integer.valueOf((String) newValue);
+            LineageSettings.Secure.putInt(getActivity().getContentResolver(),
+                    LineageSettings.Secure.NETWORK_TRAFFIC_UNITS, units);
         }
         return true;
     }
@@ -79,7 +86,7 @@ public class NetworkTrafficSettings extends SettingsPreferenceFragment
     private void updateEnabledStates(int mode) {
         final boolean enabled = mode != 0;
         mNetTrafficAutohide.setEnabled(enabled);
+        mNetTrafficUnits.setEnabled(enabled);
         mNetTrafficShowUnits.setEnabled(enabled);
-        mNetTrafficUseKbps.setEnabled(enabled);
     }
 }
