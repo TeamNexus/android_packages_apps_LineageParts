@@ -176,6 +176,7 @@
 
     <!-- Button settings -->
     <string name="button_pref_title">Buttons</string>
+    <string name="button_pref_summary">Manage hardware-keys/navbar and remapping</string>
     <string name="hardware_keys_power_key_title">Power button</string>
     <string name="hardware_keys_home_key_title">Home button</string>
     <string name="hardware_keys_back_key_title">Back button</string>
@@ -442,6 +443,7 @@
 
     <!-- Status bar -->
     <string name="status_bar_title">Status bar</string>
+    <string name="status_bar_summary">Edit visible icons, elements and actions</string>
     <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
     <string name="status_bar_quick_qs_pulldown_summary">%1$s edge of the status bar pulls down Quick Settings</string>
     <string name="status_bar_quick_qs_pulldown_summary_left">Left</string>
