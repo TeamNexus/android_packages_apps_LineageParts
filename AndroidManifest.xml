@@ -93,6 +93,7 @@
             android:targetActivity="PartsActivity">
             <intent-filter android:priority="-2">
                 <action android:name="org.lineageos.lineageparts.action.SETTINGS" />
+                <action android:name="org.lineageos.lineageparts.LIVEDISPLAY_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             <meta-data
@@ -189,7 +190,6 @@
         </activity-alias>
 
         <!-- Anonymous Statistics -->
-        <!--
         <receiver android:name=".lineagestats.ReportingServiceManager"
             android:enabled="true"
             android:exported="false"
@@ -213,7 +213,6 @@
                  android:label="ReportingService"
                  android:enabled="true"
                  android:exported="false" />
-        -->
 
         <!-- Weather settings -->
         <activity-alias
