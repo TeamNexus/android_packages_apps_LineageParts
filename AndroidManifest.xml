@@ -2,6 +2,7 @@
 <!--
 /**
  * Copyright 2016, The CyanogenMod Project
+ * Copyright 2017-2018, The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -226,6 +227,24 @@
                 android:resource="@string/style_summary" />
         </activity-alias>
 
+        <!-- Expanded Desktop settings (Display category) -->
+        <activity-alias
+            android:name=".applications.ExpandedDesktopSettings"
+            android:label="@string/expanded_desktop_settings_title"
+            android:targetActivity="PartsActivity">
+            <intent-filter android:priority="-9">
+                <action android:name="org.lineageos.lineageparts.action.SETTINGS" />
+                <action android:name="org.lineageos.lineageparts.EXPANDED_DESKTOP_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.display" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/expanded_desktop_settings_summary" />
+        </activity-alias>
+
         <!-- Anonymous Statistics -->
         <receiver android:name=".lineagestats.ReportingServiceManager"
             android:enabled="true"
@@ -266,7 +285,7 @@
             <intent-filter>
                 <action android:name="android.nfc.action.NDEF_DISCOVERED"/>
                 <category android:name="android.intent.category.DEFAULT"/>
-                <data android:mimeType="cm/profile" />
+                <data android:mimeType="lineage/profile" />
             </intent-filter>
         </activity>
 
