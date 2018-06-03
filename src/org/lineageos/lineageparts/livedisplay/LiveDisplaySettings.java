@@ -385,6 +385,9 @@ public class LiveDisplaySettings extends SettingsPreferenceFragment implements S
             if (!config.hasFeature(FEATURE_PICTURE_ADJUSTMENT)) {
                 result.add(KEY_PICTURE_ADJUSTMENT);
             }
+            if (!config.hasFeature(FEATURE_READING_ENHANCEMENT)) {
+                result.add(KEY_LIVE_DISPLAY_READING_ENHANCEMENT);
+            }
             return result;
         }
 
