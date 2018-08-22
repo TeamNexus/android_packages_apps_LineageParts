@@ -405,6 +405,8 @@
   <string name="status_bar_system_icons_summary">Controla quines icones de la barra d\'estat es mostren</string>
   <!-- Status bar - Clock -->
   <string name="status_bar_clock_title">Rellotge</string>
+  <string name="status_bar_clock_show_seconds_title">Mostra els segons</string>
+  <string name="status_bar_clock_show_seconds_summary">Mostra hores, minuts i segons</string>
   <string name="status_bar_clock_position_title">Posició del rellotge</string>
   <string name="status_bar_clock_position_right">Dreta</string>
   <string name="status_bar_clock_position_left">Esquerra</string>
@@ -607,6 +609,9 @@
   <string name="style_automagic_dialog_content">Estil suggerit: <b>%1$s</b> amb accent de <b>%2$s</b>.\nVols aplicar-lo?</string>
   <string name="style_automagic_dialog_positive">Aplica</string>
   <string name="style_accent_default_name">Predeterminat</string>
+  <string name="style_dark_overlay_title">Mode fosc</string>
+  <string name="style_dark_overlay_default">Per defecte</string>
+  <string name="style_dark_overlay_black">Negre</string>
   <string name="style_permission_error">Es necessita el permís d\'accés a l\'emmagatzematge per analitzar el teu fons de pantalla, si us plau otorga\'l per utilitzar aquesta característica</string>
   <!-- Trust interface -->
   <string name="trust_header">Trust us permet mantenir el dispositiu segur i protegir la vostra privadesa.\nLa icona Trust apareix per ajudar-vos a consultar la seguretat dels continguts.</string>
@@ -633,6 +638,9 @@
   <string name="trust_feature_encryption_explain">El xifrat del dispositiu impedeix l\'accés a les vostres dades quan el telèfon estigui apagat o en mode recuperació. Això és especialment important si el telèfon és robat, i evita que la gent llegeixi els vostres missatges, contactes i altra informació privada sense la contrasenya.\nPer fer que el xifratge sigui més eficaç, cal establir una pantalla de bloqueig segura.</string>
   <string name="trust_category_tools">Privadesa</string>
   <string name="trust_notification_alerts_title">Alertes de seguretat</string>
+  <string name="trust_warnings_alerts_intro">Podeu seleccionar els problemes de seguretat dels que desitgeu que li advertim. Per a la vostra seguretat, es recomana activar totes les alertes</string>
+  <string name="trust_warnings_selinux">Estat de SELinux</string>
+  <string name="trust_warnings_keys">Signatura de compilació</string>
   <string name="trust_onboarding_title">Digues hola a Trust</string>
   <string name="trust_onboarding_description">Trust us ajuda a mantenir el dispositiu segur i a protegir la vostra privadesa.\nLa icona Trust apareixerà per ajudar-vos a consultar la seguretat dels continguts</string>
   <string name="trust_onboarding_learn_more">Aprèn més</string>
